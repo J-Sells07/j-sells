@@ -1,3 +1,7 @@
+// ==========================
+// LOAD SUPPLIERS
+// ==========================
+
 const grid = document.getElementById("product-grid");
 
 if (grid) {
@@ -5,187 +9,81 @@ if (grid) {
     products.forEach(product => {
 
         grid.innerHTML += `
+
         <div class="product-card">
 
-            <div class="badge">✓ In Stock</div>
+            <div class="badge">
+                ✔ Verified Supplier
+            </div>
 
             <img src="${product.image}" alt="${product.name}">
 
             <h3>${product.name}</h3>
 
-            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="category">
+                📦 ${product.category}
+            </p>
 
-            <p>$${product.price}</p>
+            <p class="price">
+                $${product.price}
+            </p>
 
-            <button class="cart-btn" onclick="addToCart(${product.id})">
-                🛒 Add to Cart
-            </button>
+            <button
+                class="buy-btn"
+                onclick="window.location.href='contact.html'">
 
-            <button class="buy-btn" onclick="buyNow(${product.id})">
-                ⚡ Buy Now
+                Purchase Supplier
+
             </button>
 
         </div>
+
         `;
 
     });
 
 }
 
-
-
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-updateCartCount();
-
-function addToCart(id){
-
-    const product = products.find(p => p.id === id);
-
-    cart.push(product);
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    updateCartCount();
-
-    alert(product.name + " added to cart!");
-
-}
-
-function buyNow(id){
-
-    const product = products.find(p => p.id === id);
-
-    alert(
-`To purchase:
-
-${product.name}
-
-Please send $${product.price} to
-
-Cash App: $JMPMVP11
-
-After paying, DM @j_seller1to1 with your payment confirmation.`
-    );
-
-}
-
-
-function checkout(){
-
-    alert(
-`Checkout
-
-Send your payment to:
-
-Cash App:
-$JMPMVP11
-
-After paying, DM @j_seller1to1 with:
-
-• Your name
-• Shipping address
-• A screenshot of your payment
-
-Thank you for shopping with J-Sells!`
-    );
-
-}
-
-
-function updateCartCount(){
-
-    const counter = document.getElementById("cart-count");
-
-    if(counter){
-        counter.innerText = cart.length;
-    }
-
-}
-
-
-const cartContainer = document.getElementById("cart-items");
-
-if (cartContainer) {
-
-    cartContainer.innerHTML = "";
-
-    let total = 0;
-
-    if (cart.length === 0) {
-
-        cartContainer.innerHTML = "<p>Your cart is empty.</p>";
-
-    } else {
-
-        cart.forEach((product, index) => {
-
-    total += Number(product.price);
-
-    cartContainer.innerHTML += `
-        <div class="product-card">
-
-            <img src="${product.image}" alt="${product.name}">
-
-            <h3>${product.name}</h3>
-
-            <div class="stars">⭐⭐⭐⭐⭐</div>
-
-            <p>$${product.price}</p>
-
-            <button class="remove-btn" onclick="removeFromCart(${index})">
-                ❌ Remove
-            </button>
-
-        </div>
-    `;
-
-});
-
-        const totalElement = document.getElementById("total");
-        if (totalElement) {
-            totalElement.textContent = `Total: $${total}`;
-        }
-    }
-}
-
-
-function removeFromCart(index){
-
-    cart.splice(index, 1);
-
-    localStorage.setItem("cart", JSON.stringify(cart));
-
-    location.reload();
-
-}
-
+// ==========================
+// SEARCH
+// ==========================
 
 function searchProducts(){
 
     const input = document
-        .getElementById("search")
-        .value
-        .toLowerCase();
+        .getElementById("search");
 
-    const results = document.getElementById("search-results");
+    if(!input) return;
+
+    const value = input.value.toLowerCase();
+
+    const results = document
+        .getElementById("search-results");
+
+    if(!results) return;
 
     results.innerHTML = "";
 
-    if(input === ""){
+    if(value === ""){
 
         results.style.display = "none";
+
         return;
 
     }
 
     const matches = products.filter(product =>
-        product.name.toLowerCase().includes(input)
+
+        product.name
+            .toLowerCase()
+            .includes(value)
+
     );
 
     if(matches.length === 0){
 
         results.style.display = "none";
+
         return;
 
     }
@@ -195,12 +93,43 @@ function searchProducts(){
     matches.forEach(product=>{
 
         results.innerHTML += `
-            <div class="search-item"
-                 onclick="window.location.href='shop.html'">
-                🔍 ${product.name}
-            </div>
+
+        <div
+            class="search-item"
+            onclick="window.location.href='shop.html'">
+
+            🔍 ${product.name}
+
+        </div>
+
         `;
 
     });
 
 }
+
+// ==========================
+// CLOSE SEARCH RESULTS
+// ==========================
+
+document.addEventListener("click", function(event){
+
+    const search = document.getElementById("search");
+
+    const results = document.getElementById("search-results");
+
+    if(!search || !results) return;
+
+    if(
+
+        event.target !== search &&
+
+        !results.contains(event.target)
+
+    ){
+
+        results.style.display = "none";
+
+    }
+
+});
