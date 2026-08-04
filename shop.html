@@ -1,44 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop | J-Sells</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Suppliers | J-Sells</title>
+
+<meta name="description" content="Browse trusted supplier listings from J-Sells.">
+
+<link rel="icon" href="images/logo.png">
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <header class="navbar">
 
-<div class="logo">
-    <img src="images/logo.png" alt="J-Sells Logo">
-    <h2>J-Sells</h2>
-</div>
+<a href="index.html" class="logo">
+
+<img src="images/logo.png" alt="J-Sells">
+
+<h2>J-Sells</h2>
+
+</a>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="shop.html">Shop</a>
-    <a href="contact.html">Contact</a>
 
-    <button class="cart" onclick="window.location.href='cart.html'">
-        🛒 <span id="cart-count">0</span>
-    </button>
+<a href="index.html">Home</a>
+
+<a href="shop.html">Suppliers</a>
+
+<a href="contact.html">Contact</a>
 
 </nav>
+
+<div class="right">
+
+<input
+type="text"
+id="search"
+placeholder="Search suppliers..."
+onkeyup="searchProducts()">
+
+<div id="search-results"></div>
+
+</div>
 
 </header>
 
 <section class="products">
 
-<h1>All Products</h1>
+<h1>Supplier Directory</h1>
+
+<p class="shop-subtitle">
+
+Browse our supplier listings. Purchase supplier information securely and receive it after payment confirmation.
+
+</p>
 
 <div id="product-grid"></div>
 
 </section>
 
+<section class="about">
+
+<h2>Why Buy Supplier Information?</h2>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>🚀 Save Time</h3>
+
+<p>
+
+Skip hours of searching online. We organize supplier listings in one place so you can find opportunities faster.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>💼 Start Selling</h3>
+
+<p>
+
+Whether you're starting your first business or expanding an existing one, supplier information can help you source products more efficiently.
+
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🤝 Ongoing Growth</h3>
+
+<p>
+
+Our directory will continue growing with additional supplier listings and product categories over time.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<h2>J-Sells</h2>
+
+<p>Premium Supplier Directory</p>
+
+<p>Instagram: @j_seller1to1</p>
+
+<p>© 2026 J-Sells. All rights reserved.</p>
+
+</footer>
+
 <script src="products.js"></script>
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
