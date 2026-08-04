@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-Sells | Premium Electronics & Luxury</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<img src="images/logo.png" alt="J-Sells Logo">
+<h2>J-Sells</h2>
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="shop.html">Shop</a>
+
+<a href="contact.html">Contact</a>
+
+<button class="cart" onclick="window.location.href='cart.html'">
+🛒 <span id="cart-count">0</span>
+</button>
+
+</nav>
+
+<div class="right">
+
+<input
+    type="text"
+    id="search"
+    placeholder="Search Products"
+    onkeyup="searchProducts()">
+
+    <div id="search-results"></div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+    <h1>OWN THE LOOK.</h1>
+
+    <p>
+        Premium Sneakers, Electronics & Luxury Accessories.
+    </p>
+
+    <button class="hero-btn" onclick="window.location.href='shop.html'">
+        SHOP NOW →
+    </button>
+
+    <div class="ig">
+        Follow us @j_seller1to1
+    </div>
+
+</section>
+
+<section class="featured">
+
+    <div class="featured-text">
+
+        <span class="featured-tag">FEATURED PRODUCT</span>
+
+        <h2>AirPods Pro (2nd Generation)</h2>
+
+        <p>
+            Premium sound, Active Noise Cancellation,
+            Transparency Mode, and all-day battery life.
+        </p>
+
+        <h3>$50</h3>
+
+        <button class="hero-btn" onclick="window.location.href='shop.html'">
+            Buy Now
+        </button>
+
+    </div>
+
+    <div class="featured-image">
+
+        <img src="images/airpods-pro-2.jpg" alt="AirPods Pro">
+
+    </div>
+
+</section>
+
+
+<section class="products">
+
+<h2>Featured Products</h2>
+
+<div id="product-grid">
+
+</div>
+
+</section>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+
+<footer class="footer">
+
+    <h2>J-Sells</h2>
+
+    <p>Premium Sneakers • Electronics • Luxury Goods</p>
+
+    <p>Instagram: @j_seller1to1</p>
+
+    <p>Cash App: $JMPMVP11</p>
+
+    <p>© 2026 J-Sells. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>
