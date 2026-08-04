@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>J-Sells | Find Trusted Suppliers</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        <img src="images/logo.png" alt="J-Sells Logo">
+        <h2>J-Sells</h2>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Suppliers</a>
+        <a href="contact.html">Contact</a>
+
+        <button class="cart" onclick="window.location.href='cart.html'">
+            🛒 <span id="cart-count">0</span>
+        </button>
+    </nav>
+
+    <div class="right">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search Suppliers..."
+            onkeyup="searchProducts()">
+
+        <div id="search-results"></div>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <h1>Find Trusted Suppliers</h1>
+
+    <p>
+        Electronics • Sneakers • Fashion • Accessories
+    </p>
+
+    <button class="hero-btn"
+        onclick="window.location.href='shop.html'">
+        Browse Suppliers
+    </button>
+
+    <div class="ig">
+        Instagram: @j_seller1to1
+    </div>
+
+</section>
+
+
+<section class="about">
+
+    <h2>About J-Sells</h2>
+
+    <p>
+        J-Sells helps connect people with suppliers for electronics,
+        sneakers, fashion and accessories.
+        Browse available listings and contact us for more information.
+    </p>
+
+</section>
+
+
+<section class="about">
+
+    <h2>Why Choose J-Sells?</h2>
+
+    <p>
+        ✔ Easy to browse<br><br>
+
+        ✔ Multiple supplier listings<br><br>
+
+        ✔ Fast responses through Instagram
+    </p>
+
+</section>
+
+
+<footer class="footer">
+
+    <h2>J-Sells</h2>
+
+    <p>Supplier Directory</p>
+
+    <p>Instagram: @j_seller1to1</p>
+
+    <p>© 2026 J-Sells</p>
+
+</footer>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
