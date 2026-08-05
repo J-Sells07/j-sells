@@ -820,3 +820,14 @@ nav a:hover{
     }
 
 }
+
+
+@media (max-width:600px){
+
+    #product-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
