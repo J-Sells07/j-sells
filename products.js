@@ -4,7 +4,7 @@ const products = [
 
         id: 1,
 
-        name: "AirPods Pro (2nd Generation)",
+        name: "AirPods (All Versions)",
 
         price: 50,
 
