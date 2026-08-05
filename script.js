@@ -90,17 +90,15 @@ function searchProducts(){
     matches.forEach(product=>{
 
         results.innerHTML += `
-
-        <div
-            class="search-item"
-            onclick="window.location.href='shop.html?id=${product.id}'"
-            
-            🔍 ${product.name}
-
-        </div>
-
-        `;
-
+    <div
+        class="search-item"
+        onclick="window.location.href='shop.html?id=${product.id}'"
+    >
+        🔍 ${product.name}
+    </div>
+    
+   `;
+        
     });
 
 }
