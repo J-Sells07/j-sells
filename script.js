@@ -96,8 +96,8 @@ function searchProducts(){
 
         <div
             class="search-item"
-            onclick="window.location.href='shop.html'">
-
+            onclick="window.location.href='shop.html?id=${product.id}'"
+            
             🔍 ${product.name}
 
         </div>
