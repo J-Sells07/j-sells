@@ -32,7 +32,7 @@ if (grid) {
                 class="buy-btn"
                 onclick="window.location.href='contact.html'">
 
-                Purchase Supplier
+                Purchase Product
 
             </button>
 
