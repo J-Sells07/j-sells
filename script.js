@@ -6,38 +6,35 @@ const grid = document.getElementById("product-grid");
 
 if (grid) {
 
-    products.forEach(product => {
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get("id");
+
+    let productsToShow = products;
+
+    if (productId) {
+        productsToShow = products.filter(product => product.id == productId);
+    }
+
+    productsToShow.forEach(product => {
 
         grid.innerHTML += `
-
         <div class="product-card">
 
-            <div class="badge">
-                ✔ Verified Supplier
-            </div>
+            <div class="badge">In Stock</div>
 
             <img src="${product.image}" alt="${product.name}">
 
             <h3>${product.name}</h3>
 
-            <p class="category">
-                📦 ${product.category}
-            </p>
+            <p class="category">${product.category}</p>
 
-            <p class="price">
-                $${product.price}
-            </p>
+            <p class="price">$${product.price}</p>
 
-            <button
-                class="buy-btn"
-                onclick="window.location.href='contact.html'">
-
-                Purchase Product
-
+            <button class="buy-btn" onclick="window.location.href='contact.html'">
+                Buy Now
             </button>
 
         </div>
-
         `;
 
     });
