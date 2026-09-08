@@ -68,6 +68,16 @@ const products = [
         price: 80,
         image: "images/jordan4-black-cat.jpg",
         category: "Sneakers"
+    },
+
+    {
+        
+        id: 8,
+        name: "Jean Paul Gaultier Cologne",
+        price: 50,
+        image: "images/jean-paul-gaultier.jpg",
+        category: "Fragrance"
+    
     }
 
-];
+    ];
