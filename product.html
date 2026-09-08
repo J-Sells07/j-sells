@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J-Sells | Product</title>
 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="J-Sells Logo">
+            <h2>J-Sells</h2>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main class="products">
+
+        <div id="product-details"></div>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <h2>J-Sells</h2>
+
+        <p>Premium Products. Affordable Prices.</p>
+
+        <p>Instagram: @j_seller1to1</p>
+
+        <p>© 2026 J-Sells. All Rights Reserved.</p>
+
+    </footer>
+
+
+    <script src="products.js"></script>
+
+    <script>
+
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get("id");
+
+        const product = products.find(item => item.id == productId);
+
+        const details = document.getElementById("product-details");
+
+        if (product) {
+
+            details.innerHTML = `
+
+                <div class="product-card">
+
+                    <div class="badge">In Stock</div>
+
+                    <img src="${product.image}" alt="${product.name}">
+
+                    <h3>${product.name}</h3>
+
+                    <p class="category">${product.category}</p>
+
+                    <p class="price">$${product.price}</p>
+
+                    <button class="buy-btn"
+                        onclick="window.location.href='contact.html'">
+                        Buy Now
+                    </button>
+
+                </div>
+
+            `;
+
+        } else {
+
+            details.innerHTML = `
+
+                <div class="contact-card">
+
+                    <h3>Product Not Found</h3>
+
+                    <p>Sorry, this product could not be found.</p>
+
+                </div>
+
+            `;
+
+        }
+
+    </script>
+
+</body>
+</html>
