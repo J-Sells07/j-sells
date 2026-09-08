@@ -72,7 +72,7 @@ const products = [
 
     {
         
-        id: 8,
+        id: 9,
         name: "Jean Paul Gaultier Cologne",
         price: 50,
         image: "images/jean-paul-gaultier.jpg",
