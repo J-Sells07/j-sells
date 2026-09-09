@@ -78,6 +78,15 @@ const products = [
         image: "images/jean-paul-gaultier.jpg",
         category: "Fragrance"
     
-    }
+    },
 
+    {
+        id: 10,
+        name: "Louis Vuitton Belt",
+        price: 40,
+        image: "images/louis-vuitton-belt.jpg",
+        category: "Clothing"
+    
+    }  
+    
     ];
