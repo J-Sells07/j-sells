@@ -87,6 +87,15 @@ const products = [
         image: "images/louis-vuitton-belt.jpg",
         category: "Clothing"
     
-    }  
+    },  
+
+    {
+        id: 11,
+        name: "Jordan 1's",
+        price: 70,
+        image: "images/jordan-ones.jpg",
+        category: "Sneakers"
     
+    }  
+
     ];
