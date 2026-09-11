@@ -96,6 +96,16 @@ const products = [
         image: "images/jordan-ones.jpg",
         category: "Sneakers"
     
-    }  
+    },  
 
+    {
+        
+        id: 12,
+        name: "PSD Underwear (Min. Order: 6 Pieces)",
+        price: 50,
+        image: "images/psd-underwear.jpg",
+        category: "Clothing"
+          
+    } 
+    
     ];
