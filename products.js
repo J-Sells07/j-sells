@@ -106,6 +106,16 @@ const products = [
         image: "images/psd-underwear.jpg",
         category: "Clothing"
           
+    },
+
+    {
+        
+        id: 13,
+        name: "Hellstar Hoodie",
+        price: 65,
+        image: "images/hellstar-hoodie.jpg",
+        category: "streetwear"
+          
     } 
     
     ];
