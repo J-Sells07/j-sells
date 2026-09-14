@@ -116,6 +116,16 @@ const products = [
         image: "images/hellstar-hoodie.jpg",
         category: "streetwear"
           
-    } 
+    }, 
+
+    {
+        
+        id: 14,
+        name: "Sp5der Shorts",
+        price: 45,
+        image: "images/spider-shorts.jpg",
+        category: "clothing"
+          
+    }
     
     ];
