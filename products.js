@@ -114,7 +114,7 @@ const products = [
         name: "Hellstar Hoodie",
         price: 65,
         image: "images/hellstar-hoodie.jpg",
-        category: "streetwear"
+        category: "Streetwear"
           
     }, 
 
@@ -124,7 +124,7 @@ const products = [
         name: "Sp5der Shorts",
         price: 45,
         image: "images/spider-shorts.jpg",
-        category: "clothing"
+        category: "Clothing"
           
     },
 
@@ -134,7 +134,7 @@ const products = [
         name: "Coach Bags (Specific Versions)",
         price: 60,
         image: "images/coach-bags.jpg",
-        category: "accessory"
+        category: "Accessory"
           
     }  
     
