@@ -126,6 +126,16 @@ const products = [
         image: "images/spider-shorts.jpg",
         category: "clothing"
           
-    }
+    },
+
+     {
+        
+        id: 15,
+        name: "Coach Bags (Specific Versions)",
+        price: 60,
+        image: "images/coach-bags.jpg",
+        category: "accessory"
+          
+    }  
     
     ];
